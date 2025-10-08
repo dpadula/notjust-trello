@@ -19,7 +19,7 @@ export default TaskListItem;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#1D2125',
+    backgroundColor: '#3a424bff',
     padding: 10,
     borderRadius: 5,
     flexDirection: 'row',

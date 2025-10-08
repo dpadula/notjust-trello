@@ -1,5 +1,5 @@
 import { View } from 'react-native';
-import TaskListItem from '../components/TaskListItem';
+import TaskList from '../components/TaskList';
 
 export default function Index() {
   return (
@@ -8,9 +8,7 @@ export default function Index() {
         padding: 10,
       }}
     >
-      <TaskListItem task={{ description: 'Task 1' }} />
-      <TaskListItem task={{ description: 'Task 2' }} />
-      <TaskListItem task={{ description: 'Task 3' }} />
+      <TaskList />
     </View>
   );
 }
