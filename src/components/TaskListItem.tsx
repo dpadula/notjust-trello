@@ -1,6 +1,7 @@
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { Link } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
 interface TaskListItemProps {
   task: { description: string };
@@ -8,10 +9,14 @@ interface TaskListItemProps {
 
 const TaskListItem = ({ task }: TaskListItemProps) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{task.description}</Text>
-      <AntDesign name='close' size={16} color='gray' />
-    </View>
+    // La propiedad asChild hace que el Link no cree un View adicional y use el View que ya existe como root. Pero tenemos que reemplazar
+    // el View por un Pressable para que funcione el toque
+    <Link href='/details' asChild>
+      <Pressable style={styles.container}>
+        <Text style={styles.text}>{task.description}</Text>
+        <AntDesign name='close' size={16} color='gray' />
+      </Pressable>
+    </Link>
   );
 };
 
