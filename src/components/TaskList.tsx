@@ -11,14 +11,20 @@ import TaskListItem from './TaskListItem';
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([
-    { description: 'Sample Task' },
-    { description: 'Sample Task' },
+    { id: 1, description: 'Sample Task' },
+    { id: 2, description: 'Sample Task' },
   ]);
 
   const [newTask, setNewTask] = useState('');
 
   const createTask = () => {
-    setTasks([...tasks, { description: newTask }]);
+    setTasks([
+      ...tasks,
+      {
+        description: newTask,
+        id: tasks.length + 1,
+      },
+    ]);
     setNewTask('');
   };
   return (
