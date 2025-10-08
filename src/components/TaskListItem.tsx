@@ -13,7 +13,9 @@ export default TaskListItem;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    backgroundColor: '#1D2125',
+    padding: 10,
+    borderRadius: 5,
   },
   text: {
     color: 'white',
