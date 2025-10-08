@@ -14,8 +14,12 @@ const TaskList = () => {
     { description: 'Sample Task' },
     { description: 'Sample Task' },
   ]);
+
+  const [newTask, setNewTask] = useState('');
+
   const createTask = () => {
-    setTasks([...tasks, { description: 'New Task' }]);
+    setTasks([...tasks, { description: newTask }]);
+    setNewTask('');
   };
   return (
     <View style={styles.container}>
@@ -28,6 +32,8 @@ const TaskList = () => {
       />
 
       <TextInput
+        value={newTask}
+        onChangeText={setNewTask}
         placeholder='Add Task'
         placeholderTextColor='gray'
         style={styles.inputAddTask}
