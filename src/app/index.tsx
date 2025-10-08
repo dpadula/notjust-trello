@@ -8,7 +8,9 @@ export default function Index() {
         padding: 10,
       }}
     >
-      <TaskListItem />
+      <TaskListItem task={{ description: 'Task 1' }} />
+      <TaskListItem task={{ description: 'Task 2' }} />
+      <TaskListItem task={{ description: 'Task 3' }} />
     </View>
   );
 }
