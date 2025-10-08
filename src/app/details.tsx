@@ -1,11 +1,13 @@
+import { Stack } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 const TaskDetails = () => {
   return (
-    <View>
-      <Text>TaskDetails</Text>
-    </View>
+    <>
+      <Stack.Screen options={{ title: 'Task Details' }} />
+      <Text>Details</Text>
+    </>
   );
 };
 

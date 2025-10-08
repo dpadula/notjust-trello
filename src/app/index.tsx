@@ -1,5 +1,11 @@
+import { Stack } from 'expo-router';
 import TaskBoard from '../components/TaskBoard';
 
 export default function Index() {
-  return <TaskBoard />;
+  return (
+    <>
+      <Stack.Screen options={{ title: 'Trello Board' }} />
+      <TaskBoard />
+    </>
+  );
 }
