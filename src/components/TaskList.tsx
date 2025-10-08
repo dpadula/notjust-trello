@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   inputAddTask: {
     color: 'white',
-    backgroundColor: '#1D2125',
+    backgroundColor: '#2b3238ff',
     padding: 10,
     borderRadius: 5,
   },
