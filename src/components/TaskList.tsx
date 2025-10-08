@@ -23,7 +23,7 @@ const TaskList = () => {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Task List</Text>
+      <Text style={styles.title}>Task List</Text>
 
       <FlatList
         data={tasks}
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     gap: 10,
   },
-  text: {
+  title: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
